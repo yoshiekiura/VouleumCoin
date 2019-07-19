@@ -1,0 +1,36 @@
+/** TokenLite v1.0.2 */
+.page-ath-logo img {max-height: 100px; max-width: 220px;}
+.topbar-wrap{ z-index: 1040;}
+.dt-filter-text{ position: absolute; right: 0; top: 0; z-index: 999;}
+.toggle-datatable-filter {width: 165px;}
+.dropdown-dt-filter-text{ top: 0; left: auto; right: calc(100% + 42px); transform: translatex(0);}
+div.dataTables_wrapper div.dataTables_info {font-size: 11px;}
+.social-links { margin: 0 0 20px;}
+.social-links li { display: inline-block; padding: 2px 4px 0 0;}
+.social-links li a { display: block; text-align: center; width: 36px; line-height: 32px; border-radius: 50%; color: #6e81a9; border: 2px solid #6e81a9;}
+.social-links li a:hover {color: #2b56f5; border-color: #2b56f5;}
+.kyc-file.fa-file-pdf, .kyc-file.fa-image {font-size: 40px; line-height: 54px; display: block; text-align: center; opacity: .2}
+.data-doc-item-lg .kyc-file.fa-file-pdf, .data-doc-item-lg .kyc-file.fa-image {font-size: 110px; line-height: 140px}
+.kyc-list .dt-sbdate { display: none;} @media (min-width: 768px) {.kyc-list .dt-sbdate {display: table-cell;}}
+.kyc-option-head {color: #222d4b;padding-top: 18px;padding-bottom: 18px;}
+.kyc-option {border-bottom: 1px solid #e5ecf8;} .data-item .sub-s2.sub-time {font-size: 0.8em;}
+.dt-docs a {font-size: 0.8em;} .data-doc-image {overflow: hidden;} 
+.data-doc-image img {position: absolute; height: 100%; left: 50%; transform: translateX(-50%); width: auto;
+    max-width: initial;}
+.copyright-text {font-size: 13px;}
+.popup-body {font-size: 13px;}
+.popup-body form:last-child {margin-bottom: 0;}
+.tile-data-active {padding: 3px 10px; background: #dfebff; border-color: #accdff; color:#2c80ff;} 
+.tile-data-active:after {display: none}
+.token-balance-icon img {width: 32px}
+@media (min-width: 576px) { .tile-data-active {padding: 5px 12px;} }
+@media (min-width: 480px) { .popup-body-md {padding: 20px 30px 25px;} }
+.navbar-menu>li .menu-icon {font-size: 16px;}
+.user-thumb em {line-height: 30px;}
+body.user-dashboard a.site-brand img {max-height: 40px;}
+body.modern input[type="checkbox"]+label.error {color: white !important;}
+.bonus-bar .bonus-extra {width: 100%; margin: 4px;} .bonus-bar.with-base-bonus .bonus-extra{width: 80%; margin: 4px 4px 4px 2px;}
+.validate-modern .input-checkbox ~ .error, .validate-modern .input-radio ~ .error {color: #fff !important;}
+.input-checkbox ~ label:not(.error), .input-radio ~ label:not(.error) {text-transform: initial;}
+.dz-clickable {padding-top: 25px;} .dz-message {padding-bottom: 15px;}
+.no-had-soft {margin-bottom: 10px;}
