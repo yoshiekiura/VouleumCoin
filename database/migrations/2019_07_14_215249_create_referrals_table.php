@@ -14,11 +14,11 @@ class CreateReferralsTable extends Migration
     public function up()
     {
         Schema::create('referrals', function (Blueprint $table) {
-            $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users');
             $table->string('invete');
             $table->string('inveted');
             $table->integer('level');
+
+
             $table->timestamps();
         });
     }

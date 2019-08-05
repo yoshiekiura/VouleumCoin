@@ -12,6 +12,7 @@ namespace App\Http\Controllers\User;
  */
 use App\Models\Activity;
 use App\Models\User;
+use App\Models\Referral;
 use Validator;
 use Carbon\Carbon;
 use IcoHandler;
@@ -23,6 +24,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Auth;
+use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 {
@@ -78,17 +80,16 @@ class UserController extends Controller
      * @return void
      */
     public function referrals()
-    {
-       
-        //select the users who added by Auth
-        
-        $users = User::where('referralInfoo', '=', Auth::user()->referral)->get();
+    {     
         //select all info of user
-        $user = Auth::user();
-        
+        $user = Auth::user();     
         $userMeta = UserMeta::getMeta($user->id);
-        
-        return view('user.referrals', compact('user','users','userMeta'));
+
+
+        $x=$user->referral;        
+        $ref = DB::select('select * from referrals where invete = ? ORDER BY level ASC ', [$x]);
+
+        return view('user.referrals', compact('user','userMeta'), ['ref' => $ref]);
     }
 
     /**----------------------------------------------------------------------------

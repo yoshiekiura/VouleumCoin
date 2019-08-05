@@ -10,14 +10,15 @@ $check_users = \App\Models\User::count();
     <!-- test -->
   <?php 
      
-    if(count($_REQUEST)!=0){$ref=$_REQUEST['ref'];
+    if(count($_REQUEST)!=0){
+                          $ref=$_REQUEST['ref'];
                              
                            }
            else{
-               
+
                $ref=null;
-            
-               }
+               
+            }
      ?>
        
 
@@ -34,7 +35,7 @@ $check_users = \App\Models\User::count();
         <div class="input-item">
             <input type="text" placeholder="{{__('Your Name')}}" class="input-bordered{{ $errors->has('name') ? ' input-error' : '' }}" name="name" value="{{ old('name') }}" required>
         </div>
-       <input type="text" hidden  name="inveted" value="{{$ref}}" >    
+       <input type="text" hidden  name="referral" value="{{$ref}}" >    
         <div class="input-item">
             <input type="email" placeholder="{{__('Your Email')}}" class="input-bordered{{ $errors->has('email') ? ' input-error' : '' }}" name="email" value="{{ old('email') }}" required>
         </div>

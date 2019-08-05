@@ -19,7 +19,7 @@ if(application_installed()){
 }
 
 // Handle Main / Route
-Route::get('/', 'Auth\LoginController@checkLoginState')->name('home');
+Route::get('/', 'HomeController@home')->name('home');
 Route::get('/locale', 'PublicController@set_lang')->name('language');
 
 // Authenticates Routes

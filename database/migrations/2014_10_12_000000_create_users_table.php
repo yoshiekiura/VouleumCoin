@@ -31,8 +31,8 @@ class CreateUsersTable extends Migration
             $table->enum('role', ['admin', 'manager', 'user'])->default('user');
             $table->double('contributed')->nullable();
             $table->double('tokenBalance')->nullable();
-            $table->string('referral')->nullable();
-            $table->string('referralInfoo')->nullable();
+            $table->string('referral');
+            $table->integer('level')->nullable()->default(0);
             $table->text('referralInfo')->nullable();
             $table->integer('google2fa')->default(0);
             $table->text('google2fa_secret')->nullable();

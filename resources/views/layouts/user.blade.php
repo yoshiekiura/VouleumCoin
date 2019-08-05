@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="{{ asset('assets/css/vendor.bundle.css').css_js_ver() }}">
     <link rel="stylesheet" href="{{ asset('assets/css/'.get_setting('user_dashboard_color','style').'.css').css_js_ver() }}">
     <link rel="stylesheet" href="{{ asset('assets/css/custom.css').css_js_ver() }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
     @stack('header')
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
