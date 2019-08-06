@@ -49,7 +49,7 @@ Route::post('admin/logout', 'Auth\LoginController@logout')->name('admin.logout')
 Route::prefix('user')->middleware(['auth', 'user', 'verify_user'])->name('user.')->group(function () {
     Route::get('/', 'User\UserController@index')->name('home');
     Route::get('/account', 'User\UserController@account')->name('account');
-    Route::get('/referrals', 'User\UserController@referrals')->name('referrals');
+    Route::get('/referrals', 'User\ReferralController@index')->name('referrals');
     Route::get('/account/activity', 'User\UserController@account_activity')->name('account.activity');
     Route::get('/contribute', 'User\TokenController@index')->name('token');
     Route::get('/transactions', 'User\TransactionController@index')->name('transactions');

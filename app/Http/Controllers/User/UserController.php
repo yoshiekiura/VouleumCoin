@@ -6,9 +6,9 @@ namespace App\Http\Controllers\User;
  * User Controller
  *
  *
- * @package TokenLite
- * @author Softnio
- * @version 1.0.0
+ * @package Chkernit
+ * @author Chkernit
+ * @version 1.1
  */
 use App\Models\Activity;
 use App\Models\User;
@@ -70,27 +70,7 @@ class UserController extends Controller
         return view('user.account', compact('user', 'userMeta', 'countries'));
     }
 
-    
-    /**-------------------------------------------------------
-     * Show the user Affiliate Program page.
-     *
-     * @return \Illuminate\Http\Response
-     * @version 1.0.0
-     * @since 1.0
-     * @return void
-     */
-    public function referrals()
-    {     
-        //select all info of user
-        $user = Auth::user();     
-        $userMeta = UserMeta::getMeta($user->id);
-
-
-        $x=$user->referral;        
-        $ref = DB::select('select * from referrals where invete = ? ORDER BY level ASC ', [$x]);
-
-        return view('user.referrals', compact('user','userMeta'), ['ref' => $ref]);
-    }
+   
 
     /**----------------------------------------------------------------------------
      * Show the user account activity page.

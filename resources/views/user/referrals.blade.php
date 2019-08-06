@@ -20,7 +20,7 @@
                                 
                      <div class="input-group">
                               <input id="ref_url" class="form-control"   name="url" type="text"
-                              value="http://127.0.0.1:8000/register?ref={{$user->referral}}">
+                              value="http://www.voulumcoin/register?ref={{$user->referral}}">
                     <span class="input-group-btn">
                         <button id="copy-ref-url" onclick="coypf()" class="btn btn-primary" type="button">Copy</button>
                     </span>
@@ -44,6 +44,7 @@
     <div class="col-md-8  animated fadeInDown">   
        <h4 class="card-title">{{__('Genealogy')}}</h4>
        <br>
+        @if(count($referral)>0)
        <table class="table">
     <thead>
       <tr>
@@ -53,15 +54,19 @@
       </tr>
     </thead>
     <tbody>
-    @foreach($ref as $re)
-              <tr>
-        <td>{{ $re->inveted }}</td>
-        <td>{{  $re->level }}</td>
-      </tr>
-      <tr>
-      @endforeach
+         
+        @foreach($referral as $items)
+                <tr>
+          <td>{{ $items->inveted }}</td>
+          <td>{{  $items->level }}</td>
+        </tr>
+        <tr>
+    @endforeach
+             
     </tbody>
   </table>
+  @else  <p>you don't have any records ... </p>  
+           @endif
 </div>
     
  

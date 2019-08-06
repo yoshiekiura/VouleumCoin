@@ -1,12 +1,12 @@
 <?php
 /**
- * User Model
+ * Referral Model
  *
- * Store the users meta data
+ * 
  *
- * @package TokenLite
- * @author Softnio
- * @version 1.0
+ * @package Chkernit
+ * @author Chkernit
+ * @version 1.1
  */
 namespace App\Models;
 
@@ -28,7 +28,6 @@ class Referral extends Model
      * @var array
      */
     protected $fillable = [
-        'user_id',
         'invete',
         'inveted',
         'level',      

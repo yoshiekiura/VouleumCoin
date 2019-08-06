@@ -7,22 +7,13 @@ $check_users = \App\Models\User::count();
 @endphp
 
 <div class="page-ath-form">
-    <!-- test -->
-  <?php 
-     
-    if(count($_REQUEST)!=0){
-                          $ref=$_REQUEST['ref'];
-                             
-                           }
-           else{
-
-               $ref=null;
-               
-            }
-     ?>
-       
-
-
+    <!-- test of referral -->
+      
+    @if(count($_REQUEST)!=0)
+           @php  $ref=$_REQUEST['ref']; @endphp                     
+       @else
+            @php   $ref=null;  @endphp    
+     @endif
     <h2 class="page-ath-heading">{{__('Sign up')}} <small>{{__('Create New')}} {{ site_info('name') }} {{__('Account')}}</small></h2>
     <form class="register-form validate validate-modern" method="POST" action="{{ route('register') }}" id="register">
         @csrf
