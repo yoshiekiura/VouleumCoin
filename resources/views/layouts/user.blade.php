@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="apps" content="{{ app_info() }}">
-    <meta name="author" content="Softnio">
+    <meta name="author" content="chkernit">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>@yield('title') | {{ (site_info('name')) ? site_info('name') : app_info() }}</title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/custom.css').css_js_ver() }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 
-    @stack('header')
+    @stack('header')        
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>

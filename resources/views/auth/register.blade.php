@@ -9,7 +9,7 @@ $check_users = \App\Models\User::count();
 <div class="page-ath-form">
     <!-- test of referral -->
       
-    @if(count($_REQUEST)!=0)
+    @if(count($_REQUEST)<4)
            @php  $ref=$_REQUEST['ref']; @endphp                     
        @else
             @php   $ref=null;  @endphp    

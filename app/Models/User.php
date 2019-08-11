@@ -26,6 +26,7 @@ class User extends Authenticatable // implements MustVerifyEmail
     /*
      * Table Name Specified
      */
+    
     protected $table = 'users';
 
     /**
